@@ -157,7 +157,7 @@ const galleryImages = [
   { src: "images/memorial.png", caption: "WWII Memorial" },
   { src: "images/background.jpg", caption: "Bataan Landscape" },
   { src: "images/acuzar-resort.png", caption: "Acuzar Resort" },
-  { src: "images/pilar-bataan.jpg", caption: "Pilar, Bataan" },
+  { src: "images/pilar-bataan.JPG", caption: "Pilar, Bataan" },
   { src: "images/bataan-sunset.jpg", caption: "Bataan at Sunset" },
   { src: "images/kairukan.jpg", caption: "Kairukan Falls"},
   { src: "images/ambon-ambon.jpg", caption: "Ambon-Ambon Falls"},
