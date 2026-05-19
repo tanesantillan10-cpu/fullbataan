@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bataan Province Tourism — Inquire</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Pro:wght@300;400;600&family=Bebas+Neue&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles/style.css">    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+        <img src="images/behold-bataan.png" alt="Behold Bataan logo" class="brand-logo">
+        <span class="brand-text">
+        <a class="navbar-brand" href="index.html">BATAAN <span>PROVINCE</span></a>
+    </a>     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+        <li class="nav-item"><a class="nav-link" href="festivals.html">Festivals</a></li>
+        <li class="nav-item"><a class="nav-link" href="food.html">Food</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="tips.html">Travel Tips</a></li>
+        <li class="nav-item"><a class="nav-link" href="inquiry.html" style="color:var(--gold)!important">Inquire</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ─────────── 8. INQUIRY FORM ─────────── -->
+<section id="inquiry">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-6">
+        <div class="section-eyebrow">— Get in Touch</div>
+        <h2 class="section-title" style="color: #c8922a;">Plan Your <em>Visit</em></h2>
+        <div class="gold-rule"></div>
+        <p style="color:rgba(232,213,160,.7); font-size:1rem; line-height:1.8">
+          Fill out the form below and the Bataan Tourism Office will get back to you within 2 business days with tailored travel recommendations.
+        </p>
+      </div>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="form-wrap">
+          
+          <div id="formSuccess" class="d-none text-center p-5" style="background-color: #ffffff; border-radius: 8px;">
+          <h3 style="font-size: 2rem; margin-bottom: 0.8rem; color: #212529 !important;"> <strong>Thank You!</strong></h3>
+          <p style="color: #495057 !important; margin: 0;">Thank you for your interest in Bataan. We'll contact you within 2 business days.</p>
+        </div>
+
+          <form id="inquiryForm" novalidate>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <label class="form-label">Full Name *</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Juan dela Cruz"/>
+                <div class="invalid-feedback">Full name is required.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email Address *</label>
+                <input type="email" class="form-control" id="email" placeholder="juan@email.com"/>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Contact Number *</label>
+                <input type="text" class="form-control" id="contactNum" placeholder="09XX XXX XXXX"/>
+                <div class="invalid-feedback">Contact number must contain numbers only.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Selected Destination *</label>
+                <select class="form-select" id="selectedDest">
+                  <option value="">— Choose a Destination —</option>
+                </select>
+                <div class="invalid-feedback">Please select a destination.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Travel Date *</label>
+                <input type="date" class="form-control" id="travelDate"/>
+                <div class="invalid-feedback">Please select your travel date.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Number of Visitors *</label>
+                <input type="number" class="form-control" id="numVisitors" placeholder="1" min="1"/>
+                <div class="invalid-feedback">Must be at least 1 visitor.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message *</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Tell us about your trip plans, special requests, or questions…"></textarea>
+                <div class="invalid-feedback">Please enter your message.</div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-primary-gold" style="width:100%; justify-content:center; display:inline-flex; align-items:center; gap: 0.5rem;">
+                  <span>Submit Inquiry</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" style="color: #ffffff;">
+  <div class="container py-4">
+    <div class="row align-items-center mb-3">
+      <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+        <p class="small mb-0" style="color: rgba(255, 255, 255, 0.75);">📞 (047) 237-0900 · 📧 tourism@bataan.gov.ph</p>
+      </div>
+      <div class="col-md-8 text-center text-md-end">
+        <div class="footer-links d-flex flex-wrap justify-content-center justify-content-md-end gap-3 mb-2">
+          <a href="https://www.instagram.com/explorebataan/" target="_blank" style="color: #ffffff; text-decoration: none;">Instagram</a>
+          <a href="https://www.facebook.com/explorebataan/" target="_blank" style="color: #ffffff; text-decoration: none;">Facebook</a>
+          <a href="https://bataan.gov.ph/" target="_blank" style="color: #ffffff; text-decoration: none;">Official Web</a>
+          <a href="https://beholdbataan.ph/contact-us/" target="_blank" style="color: #ffffff; text-decoration: none;">Contacts</a>
+        </div>
+        <div class="footer-nav-links d-flex flex-wrap justify-content-center justify-content-md-end gap-2 small" style="color: rgba(255, 255, 255, 0.65);">
+          <a href="index.html" class="text-decoration-none" style="color: inherit;">Home</a>·
+          <a href="about.html" class="text-decoration-none" style="color: inherit;">About</a>·
+          <a href="destinations.html" class="text-decoration-none" style="color: inherit;">Destinations</a>·
+          <a href="festivals.html" class="text-decoration-none" style="color: inherit;">Festivals</a>·
+          <a href="inquiry.html" class="text-decoration-none" style="color: inherit;">Inquire</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-line my-3" style="border-color: rgba(255, 255, 255, 0.15);">
+
+    <div class="row align-items-center small" style="color: rgba(255, 255, 255, 0.65);">
+      <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+        &copy; 2026 Bataan Tourism Guide | Created by: <strong style="color: #ffffff;">Christine S. Ango</strong>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <span class="badge bg-secondary opacity-75">BS Information System Project</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- DESTINATION DETAILS MODAL -->
+<div class="modal fade dest-modal" id="destModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <div id="modalCategory" style="font-family:'Bebas Neue',sans-serif;font-size:.7rem;letter-spacing:4px;color:var(--gold);margin-bottom:.3rem"></div>
+          <h5 class="modal-title" id="modalTitle" style="font-family:'Playfair Display',serif;font-size:1.5rem;margin:0"></h5>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body"><img id="modalImg" src="" alt="" class="modal-dest-img"/></div>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <button id="lb-close" onclick="closeLightbox()">✕</button>
+  <button class="lb-btn" id="lb-prev" onclick="lbNav(-1)">‹</button>
+  <img id="lb-img" src="" alt=""/>
+  <div id="lightbox-caption"></div>
+  <button class="lb-btn" id="lb-next" onclick="lbNav(1)">›</button>
+</div>
+</body>
+</html>
