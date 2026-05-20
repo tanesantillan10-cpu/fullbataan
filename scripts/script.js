@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const selectedDest = document.getElementById('selectedDest');
   if (selectedDest) {
-    // Clear dynamic options if any exist to prevent appending duplicates
+
     selectedDest.querySelectorAll('option:not([value=""])').forEach(opt => opt.remove());
     destinations.forEach(d => {
       const o = document.createElement('option');
@@ -190,7 +190,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── SEARCH & FILTER INITIALIZATION ──
   const searchInput = document.getElementById('searchInput');
   if (searchInput) {
     searchInput.addEventListener('input', e => {
@@ -210,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const galleryGrid = document.getElementById('galleryGrid');
   if (galleryGrid) {
-    galleryGrid.innerHTML = ''; // Safely refresh
+    galleryGrid.innerHTML = ''; 
     galleryImages.forEach((img, i) => {
       const item = document.createElement('div');
       item.className = 'gallery-item';
