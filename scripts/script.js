@@ -180,7 +180,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const selectedDest = document.getElementById('selectedDest');
   if (selectedDest) {
-
     selectedDest.querySelectorAll('option:not([value=""])').forEach(opt => opt.remove());
     destinations.forEach(d => {
       const o = document.createElement('option');
@@ -209,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const galleryGrid = document.getElementById('galleryGrid');
   if (galleryGrid) {
-    galleryGrid.innerHTML = ''; 
+    galleryGrid.innerHTML = '';
     galleryImages.forEach((img, i) => {
       const item = document.createElement('div');
       item.className = 'gallery-item';
@@ -253,10 +252,11 @@ document.addEventListener('DOMContentLoaded', () => {
       validate('message', v => v.trim().length > 5);
 
       if (valid) {
-        inquiryForm.style.display = 'none';
+        // Correctly apply Bootstrap's display utilities
+        inquiryForm.classList.add('d-none');
         const formSuccess = document.getElementById('formSuccess');
         if (formSuccess) {
-          formSuccess.style.display = 'block';
+          formSuccess.classList.remove('d-none');
           formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       }
@@ -287,7 +287,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeLightbox();
   });
 });
-
 
 function renderCards(list) {
   const grid = document.getElementById('destGrid');
@@ -396,18 +395,3 @@ function lbNav(dir) {
     lbCap.textContent = galleryImages[lbIndex].caption;
   }
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-    const inquiryForm = document.getElementById('inquiryForm');
-    const formSuccess = document.getElementById('formSuccess');
-
-    if (inquiryForm && formSuccess) {
-        inquiryForm.addEventListener('submit', function (event) {
-
-            event.preventDefault();
-
-            inquiryForm.classList.add('d-none');      
-            formSuccess.classList.remove('d-none');    
-        });
-    }
-});
